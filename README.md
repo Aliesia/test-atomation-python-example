@@ -1,0 +1,13 @@
+### TODO LIST OF TEST CASES:
+- [ ] I can enter test site
+- [ ] I can enter get the app on google play page
+- [ ] I can enter forgot password page
+- [ ] I can enter sign up page
+- [ ] I can enter sign up with facebook page
+- [ ] I can enter Privacy page
+- [ ] I can change language on Login page
+- [ ] I can return to log in page from forgot password page
+- [ ] I can return to log in page from sign up page
+- [ ] I can return to log in page from sign up with facebook page
+- [ ] I can see password of login form
+- [ ] I can NOT log in with wrong credentials
