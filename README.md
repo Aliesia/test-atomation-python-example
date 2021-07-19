@@ -1,6 +1,7 @@
 ### TODO LIST OF TEST CASES:
 - [x] As a guest I want to enter Login page
 - [x] As a guest I want to see Cookie Policy pop-up
+- [x] As a guest I want to accept Cookie Policy pop-up  
 - [ ] As a guest I want to enter Get the app on Google play page
 - [ ] As a guest I want to enter Forgot password page
 - [ ] As a guest I want to enter Sign up page
