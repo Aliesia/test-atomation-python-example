@@ -23,9 +23,14 @@ def step_impl(context, button_name):
     login_page.click_button(button_name)
 
 
-@then('I see the Login page')
-def step_impl(context):
-    assert "Instagram" in context.driver.title
+@then('I see the {page_name} page')
+def step_impl(context, page_name):
+    login_page = LoginPage(context.driver)
+    if page_name == 'Login':
+        assert 'Instagram' in context.driver.title
+    elif page_name == 'Forgot password':
+        login_page.wait_until_title_is('Reset Password • Instagram')
+        assert 'Reset Password' in context.driver.title
 
 
 @then('I see Cookie Policy pop-up')

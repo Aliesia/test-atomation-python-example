@@ -20,3 +20,8 @@ Feature: Login Action
       When I enter page URL
       Then I see Google Play integration link
        And I see Google Play integration link is clickable
+
+  Scenario: As a guest I want to enter Forgot password page
+     Given I enter page URL
+      When I click Forgot password button
+      Then I see the Forgot password page
