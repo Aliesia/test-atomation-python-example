@@ -10,7 +10,7 @@ Feature: Login Action
       When I enter page URL
       Then I see Cookie Policy pop-up
 
-  Scenario: As a guest I want to accept Cookie Policy pop-up
+  Scenario: As a guest I want to accept Cookie Policy
      Given I enter page URL
       When I click accept All Cookie Policy button
       Then I see the Login page

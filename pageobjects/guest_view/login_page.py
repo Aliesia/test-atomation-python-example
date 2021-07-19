@@ -1,10 +1,12 @@
 from pageobjects.base_page import *
 from pageobjects.guest_view.login_locators import LoginPageLocators
 
+
 class LoginPage(BasePage):
     def click_button(self, button_name):
         if button_name == 'accept All Cookie Policy':
             self.wait_for_element(LoginPageLocators.BUTTON_ACCEPT_ALL_COOKIES).click()
+            self.invisibility_of_element_located(LoginPageLocators.BUTTON_ACCEPT_ALL_COOKIES)
         elif button_name == 'Get the app on Google play':
             self.wait_for_element(LoginPageLocators.BUTTON_GET_APP_WITH_GOOGLE).click()
         elif button_name == 'Forgot password':

@@ -15,5 +15,8 @@ class BasePage:
     def wait_for_element_to_be_clickable(self, locator, timeout=10):
         return WebDriverWait(self.driver, timeout).until(expected_conditions.element_to_be_clickable(locator))
 
+    def invisibility_of_element_located(self, locator, timeout=10):
+        return WebDriverWait(self.driver, timeout).until(expected_conditions.invisibility_of_element_located(locator))
+
     def wait_for_page(self, expected_title, timeout=10):
         return WebDriverWait(self.driver, timeout).until(expected_conditions.title_is(expected_title))
