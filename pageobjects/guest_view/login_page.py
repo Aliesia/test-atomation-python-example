@@ -13,6 +13,8 @@ class LoginPage(BasePage):
             self.wait_for_element(LoginPageLocators.BUTTON_FORGOT_PASSWORD).click()
         elif button_name == 'Sign up':
             self.wait_for_element(LoginPageLocators.BUTTON_SIGN_UP).click()
+        elif button_name == 'Log in with Facebook':
+            self.wait_for_element(LoginPageLocators.BUTTON_LOG_IN_WITH_FACEBOOK).click()
 
     def get_modal_window_title(self):
         return self.wait_for_element(LoginPageLocators.TITLE_MODAL_WINDOW).text

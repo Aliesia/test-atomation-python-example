@@ -7,5 +7,6 @@ class LoginPageLocators(BasePageLocators):
     BUTTON_GET_APP_WITH_GOOGLE = (By.CSS_SELECTOR, '.z1VUo+ .z1VUo .Rt8TI')
     BUTTON_FORGOT_PASSWORD = (By.CLASS_NAME, '_2Lks6')
     BUTTON_SIGN_UP = (By.CLASS_NAME, 'se6yk')
+    BUTTON_LOG_IN_WITH_FACEBOOK = (By.CLASS_NAME, 'KPnG0')
     TITLE_MODAL_WINDOW = (By.CSS_SELECTOR, 'h2')
     LINK_URL = (By.CSS_SELECTOR, '.z1VUo:nth-of-type(2)')

@@ -5,7 +5,7 @@
 - [x] As a guest I want to enter Get the app on Google play page
 - [x] As a guest I want to enter Forgot password page
 - [x] As a guest I want to enter Sign up page
-- [ ] As a guest I want to enter Sign up with Facebook page
+- [x] As a guest I want to enter Sign up with Facebook page
 - [ ] As a guest I want to enter Privacy page
 - [ ] As a guest I want to change language on Login page
 - [ ] As a guest I want to return to Log in page from forgot password page

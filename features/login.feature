@@ -30,3 +30,8 @@ Feature: Login Action
      Given I enter page URL
       When I click Sign up button
       Then I see the Sign up page
+
+  Scenario: As a guest I want to enter Sign up with Facebook page
+     Given I enter page URL
+      When I click Log in with Facebook button
+      Then I see the Log in with Facebook page
