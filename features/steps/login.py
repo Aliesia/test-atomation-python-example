@@ -31,6 +31,9 @@ def step_impl(context, page_name):
     elif page_name == 'Forgot password':
         login_page.wait_until_title_is('Reset Password • Instagram')
         assert 'Reset Password' in context.driver.title
+    elif page_name == 'Sign up':
+        login_page.wait_until_title_is('Login • Instagram')
+        assert 'Login' in context.driver.title
 
 
 @then('I see Cookie Policy pop-up')

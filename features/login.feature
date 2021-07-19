@@ -25,3 +25,8 @@ Feature: Login Action
      Given I enter page URL
       When I click Forgot password button
       Then I see the Forgot password page
+
+  Scenario: As a guest I want to enter Sign up page
+     Given I enter page URL
+      When I click Sign up button
+      Then I see the Sign up page

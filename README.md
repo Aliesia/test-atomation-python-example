@@ -4,7 +4,7 @@
 - [x] As a guest I want to accept Cookie Policy  
 - [x] As a guest I want to enter Get the app on Google play page
 - [x] As a guest I want to enter Forgot password page
-- [ ] As a guest I want to enter Sign up page
+- [x] As a guest I want to enter Sign up page
 - [ ] As a guest I want to enter Sign up with Facebook page
 - [ ] As a guest I want to enter Privacy page
 - [ ] As a guest I want to change language on Login page

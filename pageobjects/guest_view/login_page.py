@@ -11,6 +11,8 @@ class LoginPage(BasePage):
             self.wait_for_element(LoginPageLocators.BUTTON_GET_APP_WITH_GOOGLE).click()
         elif button_name == 'Forgot password':
             self.wait_for_element(LoginPageLocators.BUTTON_FORGOT_PASSWORD).click()
+        elif button_name == 'Sign up':
+            self.wait_for_element(LoginPageLocators.BUTTON_SIGN_UP).click()
 
     def get_modal_window_title(self):
         return self.wait_for_element(LoginPageLocators.TITLE_MODAL_WINDOW).text
