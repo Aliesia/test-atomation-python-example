@@ -46,3 +46,10 @@ Feature: Login Action
       When I click change Language button
        And I change language on Ukrainian
       Then I see the language changed on Ukrainian
+
+  Scenario: As a guest I want to return to Log in page from forgot password page
+     Given I enter page URL
+      When I click Forgot password button
+       And I click Back To Login button
+      Then I see the Login page
+

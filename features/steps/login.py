@@ -82,7 +82,7 @@ def step_impl(context, integration_name):
 def step_impl(context, selected_language):
     login_page = LoginPage(context.driver)
     switcher = {
-        'Ukrainian': 'Україська'
+        'Ukrainian': 'Українська'
     }
     actual_language = login_page.get_selected_language()
     expected_language = switcher.get(selected_language)
