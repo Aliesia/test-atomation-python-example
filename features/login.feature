@@ -35,3 +35,8 @@ Feature: Login Action
      Given I enter page URL
       When I click Log in with Facebook button
       Then I see the Log in with Facebook page
+
+  Scenario: As a guest I want to enter Top Accounts page
+     Given I enter page URL
+      When I click Top Accounts button
+      Then I see the Top Accounts page

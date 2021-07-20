@@ -6,7 +6,7 @@
 - [x] As a guest I want to enter Forgot password page
 - [x] As a guest I want to enter Sign up page
 - [x] As a guest I want to enter Sign up with Facebook page
-- [ ] As a guest I want to enter Privacy page
+- [x] As a guest I want to enter Top Accounts page
 - [ ] As a guest I want to change language on Login page
 - [ ] As a guest I want to return to Log in page from forgot password page
 - [ ] As a guest I want to return to Log in page from Sign up page

@@ -36,6 +36,9 @@ def step_impl(context, page_name):
         assert 'Login' in context.driver.title
     elif page_name == 'Log in with Facebook':
         assert 'Facebook' in context.driver.title
+    elif page_name == 'Top Accounts':
+        login_page.wait_until_title_is('Profiles • Instagram')
+        assert 'Profiles' in context.driver.title
 
 
 @then('I see Cookie Policy pop-up')
