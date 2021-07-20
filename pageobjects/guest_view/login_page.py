@@ -17,6 +17,8 @@ class LoginPage(BasePage):
             self.wait_for_element(LoginPageLocators.BUTTON_LOG_IN_WITH_FACEBOOK).click()
         elif button_name == 'Top Accounts':
             self.wait_for_element(LoginPageLocators.BUTTON_TOP_ACCOUNTS).click()
+        elif button_name == 'change Language':
+            self.wait_for_element(LoginPageLocators.BUTTON_CHANGE_LANGUAGE).click()
 
     def get_modal_window_title(self):
         return self.wait_for_element(LoginPageLocators.TITLE_MODAL_WINDOW).text
@@ -29,3 +31,9 @@ class LoginPage(BasePage):
 
     def wait_until_title_is(self, expected_title):
         self.wait_for_page(expected_title)
+
+    def set_selected_language(self, language):
+        return self.driver.find_element_by_xpath(LoginPageLocators.language_xpath_element(language)).click()
+
+    def get_selected_language(self):
+        return self.wait_for_element(LoginPageLocators.TITLE_LANGUAGE).text

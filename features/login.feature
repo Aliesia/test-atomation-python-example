@@ -40,3 +40,9 @@ Feature: Login Action
      Given I enter page URL
       When I click Top Accounts button
       Then I see the Top Accounts page
+
+  Scenario: As a guest I want to change language on Login page
+     Given I enter page URL
+      When I click change Language button
+       And I change language on Ukrainian
+      Then I see the language changed on Ukrainian

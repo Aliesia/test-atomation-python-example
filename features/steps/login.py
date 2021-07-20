@@ -23,6 +23,16 @@ def step_impl(context, button_name):
     login_page.click_button(button_name)
 
 
+@when('I change language on {selected_language}')
+def step_impl(context, selected_language):
+    login_page = LoginPage(context.driver)
+    switcher = {
+        'Ukrainian': 'Українська'
+    }
+
+    login_page.set_selected_language(switcher.get(selected_language))
+
+
 @then('I see the {page_name} page')
 def step_impl(context, page_name):
     login_page = LoginPage(context.driver)
@@ -66,3 +76,14 @@ def step_impl(context, integration_name):
         return login_page.google_play_clickable_link()
     else:
         raise Exception('Element is not clickable')
+
+
+@then('I see the language changed on {selected_language}')
+def step_impl(context, selected_language):
+    login_page = LoginPage(context.driver)
+    switcher = {
+        'Ukrainian': 'Україська'
+    }
+    actual_language = login_page.get_selected_language()
+    expected_language = switcher.get(selected_language)
+    assert expected_language == actual_language
