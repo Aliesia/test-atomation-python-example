@@ -1,5 +1,6 @@
 from pageobjects.base_page import *
 from pageobjects.guest_view.login_locators import LoginPageLocators
+from pageobjects.guest_view.reset_password_locators import ResetPasswordPageLocators
 
 
 class LoginPage(BasePage):
@@ -19,6 +20,8 @@ class LoginPage(BasePage):
             self.wait_for_element(LoginPageLocators.BUTTON_TOP_ACCOUNTS).click()
         elif button_name == 'change Language':
             self.wait_for_element(LoginPageLocators.BUTTON_CHANGE_LANGUAGE).click()
+        elif button_name == 'Back To Login':
+            self.wait_for_element(ResetPasswordPageLocators.BUTTON_BACK_TO_LOGIN).click()
 
     def get_modal_window_title(self):
         return self.wait_for_element(LoginPageLocators.TITLE_MODAL_WINDOW).text
