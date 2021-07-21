@@ -37,9 +37,19 @@ def step_impl(context, selected_language):
 def step_impl(context, role):
     login_page = LoginPage(context.driver)
     switcher = {
-        'my': 12345
+        'my': 12345,
+        'wrong': 'myWrongCredentials'
     }
     login_page.field_password(switcher.get(role))
+
+
+@when('I fill username field with {role} username')
+def step_impl(context, role):
+    login_page = LoginPage(context.driver)
+    switcher = {
+        'wrong': 'myWrong@Credentials.com'
+    }
+    login_page.field_username(switcher.get(role))
 
 
 @then('I see the {page_name} page')
@@ -104,3 +114,9 @@ def step_impl(context):
     actual_type = login_page.get_type_of_password()
     expected_type = 'text'
     assert expected_type == actual_type
+
+
+@then('I see warning message on page')
+def step_impl(context):
+    login_page = LoginPage(context.driver)
+    assert login_page.get_text_color() == 'rgba(237, 73, 86, 1)'

@@ -56,7 +56,7 @@ Feature: Login Action
   Scenario: As a guest I want to return to Log in page from Sign up page
      Given I enter page URL
       When I click Sign up button
-       And I click Log in button
+       And I click Log in link button
       Then I see the Login page
 
   Scenario: As a guest I want to see password of Login form
@@ -64,3 +64,11 @@ Feature: Login Action
       When I fill password field with my password
        And I click Show button
       Then I see the password is shown
+
+  Scenario: As a guest I want NOT to log in with wrong credentials
+     Given I enter page URL
+      When I fill username field with wrong username
+       And I fill password field with wrong password
+       And I click Log in button
+      Then I see warning message on page
+

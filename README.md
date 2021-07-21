@@ -12,4 +12,4 @@
 - [x] As a guest I want to return to Log in page from Sign up page
 - [ ] As a guest I want to return to Log in page from Sign up with Facebook page
 - [x] As a guest I want to see password of Login form
-- [ ] As a guest I want NOT to log in with wrong credentials
+- [x] As a guest I want NOT to log in with wrong credentials

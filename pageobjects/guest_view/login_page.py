@@ -23,8 +23,10 @@ class LoginPage(BasePage):
             self.wait_for_element(LoginPageLocators.BUTTON_CHANGE_LANGUAGE).click()
         elif button_name == 'Back To Login':
             self.wait_for_element(ResetPasswordPageLocators.BUTTON_BACK_TO_LOGIN).click()
+        elif button_name == 'Log in link':
+            self.wait_for_element(SignUpLocators.BUTTON_LOG_IN_LINK).click()
         elif button_name == 'Log in':
-            self.wait_for_element(SignUpLocators.BUTTON_LOG_IN).click()
+            self.wait_for_element(LoginPageLocators.BUTTON_LOG_IN).click()
         elif button_name == 'Show':
             self.wait_for_element(LoginPageLocators.BUTTON_SHOW_PASSWORD).click()
 
@@ -49,5 +51,12 @@ class LoginPage(BasePage):
     def field_password(self, username):
         self.wait_for_element(LoginPageLocators.FIELD_PASSWORD).send_keys(username)
 
+    def field_username(self, username):
+        self.wait_for_element(LoginPageLocators.FIELD_USERNAME).send_keys(username)
+
     def get_type_of_password(self):
         return self.wait_for_element(LoginPageLocators.FIELD_TYPE).get_attribute('type')
+
+    def get_text_color(self):
+        self.wait_for_element(LoginPageLocators.WARNING_MESSAGE)
+        return self.driver.find_element_by_id('slfErrorAlert').value_of_css_property('color')
