@@ -10,9 +10,12 @@ class LoginPageLocators(BasePageLocators):
     BUTTON_LOG_IN_WITH_FACEBOOK = (By.CLASS_NAME, 'KPnG0')
     BUTTON_TOP_ACCOUNTS = (By.CSS_SELECTOR, '.JI_ht:nth-child(8) .uL8Hv')
     BUTTON_CHANGE_LANGUAGE = (By.CLASS_NAME, '_3G4x7')
+    BUTTON_SHOW_PASSWORD = (By.CLASS_NAME, '_8A5w5')
     TITLE_MODAL_WINDOW = (By.CSS_SELECTOR, 'h2')
     TITLE_LANGUAGE = (By.CSS_SELECTOR, '._3G4x7 span')
     LINK_URL = (By.CSS_SELECTOR, '.z1VUo:nth-of-type(2)')
+    FIELD_PASSWORD = (By.NAME, 'password')
+    FIELD_TYPE = (By.CSS_SELECTOR, '.FATdn .zyHYP')
 
     @staticmethod
     def language_xpath_element(language):

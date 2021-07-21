@@ -33,6 +33,15 @@ def step_impl(context, selected_language):
     login_page.set_selected_language(switcher.get(selected_language))
 
 
+@when('I fill password field with {role} password')
+def step_impl(context, role):
+    login_page = LoginPage(context.driver)
+    switcher = {
+        'my': 12345
+    }
+    login_page.field_password(switcher.get(role))
+
+
 @then('I see the {page_name} page')
 def step_impl(context, page_name):
     login_page = LoginPage(context.driver)
@@ -87,3 +96,11 @@ def step_impl(context, selected_language):
     actual_language = login_page.get_selected_language()
     expected_language = switcher.get(selected_language)
     assert expected_language == actual_language
+
+
+@then('I see the password is shown')
+def step_impl(context):
+    login_page = LoginPage(context.driver)
+    actual_type = login_page.get_type_of_password()
+    expected_type = 'text'
+    assert expected_type == actual_type

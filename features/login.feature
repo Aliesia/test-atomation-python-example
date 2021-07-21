@@ -58,3 +58,9 @@ Feature: Login Action
       When I click Sign up button
        And I click Log in button
       Then I see the Login page
+
+  Scenario: As a guest I want to see password of Login form
+     Given I enter page URL
+      When I fill password field with my password
+       And I click Show button
+      Then I see the password is shown

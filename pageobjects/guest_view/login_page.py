@@ -25,6 +25,8 @@ class LoginPage(BasePage):
             self.wait_for_element(ResetPasswordPageLocators.BUTTON_BACK_TO_LOGIN).click()
         elif button_name == 'Log in':
             self.wait_for_element(SignUpLocators.BUTTON_LOG_IN).click()
+        elif button_name == 'Show':
+            self.wait_for_element(LoginPageLocators.BUTTON_SHOW_PASSWORD).click()
 
     def get_modal_window_title(self):
         return self.wait_for_element(LoginPageLocators.TITLE_MODAL_WINDOW).text
@@ -43,3 +45,9 @@ class LoginPage(BasePage):
 
     def get_selected_language(self):
         return self.wait_for_element(LoginPageLocators.TITLE_LANGUAGE).text
+
+    def field_password(self, username):
+        self.wait_for_element(LoginPageLocators.FIELD_PASSWORD).send_keys(username)
+
+    def get_type_of_password(self):
+        return self.wait_for_element(LoginPageLocators.FIELD_TYPE).get_attribute('type')
