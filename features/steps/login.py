@@ -1,4 +1,5 @@
 from behave import *
+from config.app import *
 from pageobjects.guest_view.login_page import LoginPage
 
 
@@ -9,12 +10,12 @@ def step_impl(context):
 
 @given('I enter page URL')
 def step_impl(context):
-    context.driver.get('https://www.instagram.com/')
+    context.driver.get(INSTAGRAM_LOGIN_PAGE_URL)
 
 
 @when('I enter page URL')
 def step_impl(context):
-    context.driver.get('https://www.instagram.com/')
+    context.driver.get(INSTAGRAM_LOGIN_PAGE_URL)
 
 
 @when('I click {button_name} button')
@@ -37,8 +38,8 @@ def step_impl(context, selected_language):
 def step_impl(context, role):
     login_page = LoginPage(context.driver)
     switcher = {
-        'my': 12345,
-        'wrong': 'myWrongCredentials'
+        'my': MY_PASSWORD,
+        'wrong': WRONG_PASSWORD
     }
     login_page.field_password(switcher.get(role))
 
@@ -47,7 +48,7 @@ def step_impl(context, role):
 def step_impl(context, role):
     login_page = LoginPage(context.driver)
     switcher = {
-        'wrong': 'myWrong@Credentials.com'
+        'wrong': WRONG_LOGIN
     }
     login_page.field_username(switcher.get(role))
 
@@ -81,7 +82,7 @@ def step_impl(context):
 def step_impl(context, integration_name):
     login_page = LoginPage(context.driver)
     switcher = {
-        'Google Play': 'https://play.google.com/store/apps/details?id=com.instagram.android'
+        'Google Play': GOOGLE_PLAY_URL
     }
     actual_link = login_page.get_google_play_link()
     expected = switcher.get(integration_name)
